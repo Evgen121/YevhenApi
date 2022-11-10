@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 25px;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100px;
+    background-image: url('./img/photo.avif');
+    background-size: cover;
+}
+
+header .logo img {
+    height: 100px;
+    margin: 20px;
+
+}
+
+button {
+    justify-content: center;
+    background-color: #ce9e26;
+    margin-top: 20px;
+    width: 100px;
+    height: 60px;
+}
+
+.link img {
+    width: 80px;
+    margin-left: 30px;
+}
+
+@media (max-width:1200px) {
+    header .logo img {
+        height: 80px;
+    }
+
+    .link img {
+        width: 60px;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width:900px) {
+    header .logo img {
+        height: 60px;
+    }
+
+    .link img {
+        width: 40px;
+        margin-left: 10px;
+    }
+}
+
+
+/* categories */
+.nav {
+    width: 100px;
+}
+
+.categories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./img/fon.jpg');
+    background-size: cover;
+    min-height: 1000px;
+}
+
+.menu li span {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    background-image: url('./img/fon2.png');
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transform: rotate(calc(360deg / -8 * var(--i)));
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
+    color: #111;
+    transition: 0.5s;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.menu li span:hover {
+    transform: scale(3.0) rotate(calc(360deg / -8 * var(--i)));
+}
+
+.menu {
+    position: relative;
+    width: 700px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li {
+    position: absolute;
+    list-style: none;
+    left: 0;
+    transform-origin: 350px;
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+    transform: rotate(0deg) translateX(200px);
+}
+
+.menu.active li {
+    transform: rotate(calc(360deg / 8 * var(--i)));
+}
+
+.toggle {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+    font-size: 4em;
+    transition: transform 1.25s;
+}
+
+.toggle img {
+    width: 400px;
+}
+
+@media(max-width:900px) {
+    .toggle img {
+        width: 300px;
+    }
+
+    .menu {
+        width: 500px;
+        height: 500px;
+    }
+
+    .menu li {
+        transform-origin: 250px;
+    }
+
+    .nav {
+        width: 75px;
+
+    }
+
+    .menu li span {
+        width: 75px;
+        height: 75px;
+
+    }
+
+    .menu li span:hover {
+        transform: scale(2.0) rotate(calc(360deg / -8 * var(--i)));
+    }
+}
+
+@media(max-width:600px) {
+    .toggle img {
+        width: 200px;
+    }
+
+    .menu li {
+        transform-origin: 200px;
+    }
+
+    .nav {
+        width: 60px;
+    }
+
+    .menu li span {
+        width: 60px;
+        height: 60px;
+    }
+
+    .menu li span:hover {
+        transform: scale(2.0) rotate(calc(360deg / -8 * var(--i)));
+    }
+}
+
+.menu.active .toggle {
+    transform: rotate(315deg);
+}
+
+/* -------Body result----- */
+
+span {
+    color: rgb(228, 146, 23)
+}
+
+#results {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#details {
+    background-image: url('./img/photo.avif');
+    background-size: cover;
+}
+
+.result-item {
+    height: 600px;
+    width: 400px;
+    margin-top: 0;
+    margin-left: 10px;
+    margin-bottom: 1rem;
+    margin-right: 10px;
+    background: #433d99;
+    box-shadow: 2px 4px 25px #0001;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    color: white;
+}
+
+.block {
+    padding: 10px;
+}
+
+.result-item:hover {
+    box-shadow: 2px 8px 20px #0006;
+    transform: translate3d(0, -10px, 0);
+}
+
+h1 {
+    text-align: center;
+    padding: 1.2rem 0;
+    background: linear-gradient(to right, #070070, #300045);
+}
+
+.result-item img {
+    display: block;
+    height: 80px;
+    object-fit: cover;
+    margin: 10px;
+}
+
+@media(max-width:900px) {
+    .result-item {
+        width: 300px;
+        height: 400px;
+    }
+
+    * {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:639px) {
+    .result-item {
+        width: 300px;
+        height: 400px;
+    }
+
+    * {
+        font-size: 13px;
+    }
+
+    #results {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+
+/* --------Contact-----------*/
+#contact {
+    background-image: url('./img/photo.avif');
+    background-size: cover;
+    color: white;
+    font-size: 25px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+p {
+    text-align: center;
+    font-size: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 24rem;
+    gap: 1rem;
+    border: 1px solid white;
+    font-weight: 900;
+
+}
+
+input,
+textarea {
+    padding: 1.4rem;
+    background: transparent;
+    border: 1px solid white;
+    margin: 10px;
+    color: white;
+}
+
+#button {
+    width: 100%;
+    margin-top: -20px;
+}
+
+#back {
+
+    height: 40px;
+    position: fixed;
+    width: 100%;
+    background-color: #393838;
+    color: white;
+    opacity: 1;
+}
+
+#btn {
+    margin: 10px;
+    height: 70px;
+}
+
+/*-------- info---------- */
+
+#info {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 900;
+    margin-top: 40px;
+}
+
+.me {
+    display: flex;
+    align-items: center;
+}
+
+#me {
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+@media(max-width:600px) {
+    .me {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+}
+
+.btn-box {
+    display: flex;
+    justify-content: center;
+
+}
+
+#box-info {
+    background-image: url('./img/photo.avif');
+    background-size: cover;
+    color: white;
+
+}
