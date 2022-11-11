@@ -181,7 +181,7 @@ button {
     }
 
     .menu li span:hover {
-        transform: scale(2.0) rotate(calc(360deg / -8 * var(--i)));
+        transform: scale(1.0) rotate(calc(360deg / -8 * var(--i)));
     }
 }
 
