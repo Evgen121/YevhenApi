@@ -164,11 +164,11 @@ button {
 
 @media(max-width:600px) {
     .toggle img {
-        width: 200px;
+        width: 180px;
     }
 
     .menu li {
-        transform-origin: 200px;
+        transform-origin: 190px;
     }
 
     .nav {
@@ -181,7 +181,7 @@ button {
     }
 
     .menu li span:hover {
-        transform: scale(1.0) rotate(calc(360deg / -8 * var(--i)));
+        transform: scale(2.0) rotate(calc(360deg / -8 * var(--i)));
     }
 }
 
