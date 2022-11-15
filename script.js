@@ -5,7 +5,7 @@ toggle.onclick = function () {
 }
 const results = document.querySelector('#results');
 async function asyncFetch(value) {
-    const res = await fetch(`https://swapi.dev/api/${value}`);
+    const res = await fetch(`https://swapi.py4e.com/api/${value}`);
     const data = await res.json();
     displayResults(data, value)
 }
